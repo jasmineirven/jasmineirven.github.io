@@ -1,0 +1,46 @@
+.header, .footer {
+    height: 75px;
+    min-height: 75px;
+    max-height: 75px;
+}
+
+.middleHeight{
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+body{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainBody{
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.lowerThird{
+    height: 75px;
+    min-height: 75px;
+    max-height: 75px;
+}
+
+.navbar{
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+}
+
+.first, .second, .third{
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.firstNest, .secondNest{
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+}

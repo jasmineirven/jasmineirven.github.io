@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 8</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <style media="screen">
+        .centerDiv {
+            text-align: center;
+        }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div id="carDiv" class="col-md-12">
+            </div>
+
+            </div>
+
+            <div class="row">
+                <div id="clothingDiv" class="col-md-12">
+                </div>
+
+                </div>
+
+                <div class="row">
+                    <div id="plantDiv" class="col-md-12">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+            <script type="text/javascript">
+                //our program
+                // three primitive types
+
+                // a string are words in quotes, you can name it anything essentially; the computer ignores what is inside
+                var myString = "a string";
+                // when there are no quotes, the computer has to represent it as something; a number must be recognized as representing something
+                var myNumber = 2;
+                var myVar = "2";
+                // Boolean is true or fale; yes or no
+                var myBoolean = false;
+                var myVar2 = "true";
+
+                //array; declare with square brackets- a range or set of values
+                //declaring an empty array
+
+                var myArray = [];
+
+                // Calen = 0, Nicole = 1, Evan = 2
+                // if we want to reference an array we use [] square brackets
+                var myFullArray = ["Calen", "Nicole", "Evan"];
+
+                console.log(myFullArray[0]);
+
+                // two round brackets are used to execute a function
+                console.log("myFullArray 2nd value =" + myFullArray[1]);
+
+                var myMixArray = [3, "David", false];
+
+                myMixArray.push("another value");
+                console.log("myMixArray values: " + myMixArray);
+
+                //type, price, mileage, color, fuelType, src
+                // when the page loads, we go to a database and get some info about a car
+                // {} brackets are used to contain objects- a property and then a value for that property - property: value
+                // also called a key value pair- so if you ask for information it will run and give you back the value 
+                var car = {
+                    type: "SUV",
+                    price: 45000,
+                    mileage: 24,
+                    color: "magenta",
+                    fuelType: "electric",
+                    src: "images/car1.jpg",
+                    message: function() {
+                        console.log("A car is useful!");
+                    }
+                };
+
+                //object name.property
+                console.log(car.type);
+                console.log(car.price);
+                console.log(car.message());
+
+                /*
+                        $(document).ready(function(){
+                          $("#carDiv").html("<div>"+car.type+"</div>");
+                          $("#carDiv").append("<img src='"+car.src+"'/>");
+                          $("#carDiv").append("<div>"+car.price+"</div>");
+                          $("#carDiv").append("</div>");
+                        });
+                */
+
+                var clothing = {
+                    type: "Shirt",
+                    src: "images/shirt.png",
+                    price: 24,
+                    size: "XS"
+                };
+
+                var plant = {
+                    type: "Succulent",
+                    src: "images/plant.jpeg",
+                    price: 10,
+                    color: "green"
+                }
+
+                $(document).ready(function() {
+                    var myCar = "<div class='centerDiv'>" +
+                        "<div>" + car.type + "</div>" +
+                        "<img src='" + car.src + "'/>" +
+                        "<div>" + car.price + "</div>"; +
+                    "</div>";
+
+                    $("#carDiv").html(myCar);
+
+                    var myClothing = "<div class='centerDiv'>" +
+                        "<div>" + clothing.type + "</div>" +
+                        "<img src='" + clothing.src + "'/>" +
+                        "<div>" + clothing.price + "</div>" +
+                        "<div>" + clothing.size + "</div>" +
+                        "</div>";
+
+                      $("#clothingDiv").html(myClothing);
+
+                    var myPlant = "<div class='centerDiv'>" +
+                        "<div>" + plant.type + "</div>" +
+                        "<img src='" + plant.src + "'/>" +
+                        "<div>" + plant.price + "</div>" +
+                        "<div>" + plant.color + "</div>" +
+                        "</div>";
+
+                    $("#plantDiv").html(myPlant);
+                });
+            </script>
+
+</body>
+
+</html>

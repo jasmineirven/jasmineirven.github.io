@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JavaScript</title>
+
+    <body>
+        Hello world!
+
+        <div id="myDiv">
+            Look some text!
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+        <script>
+            // () means execute this function
+
+            // alert("This is a popup"); is a built in function
+
+            // use this when you think you did something wrong, this can help you find your mistake (use inspect and then go to console)
+            console.log("This is for debugging messages");
+
+            // var is something that changes;
+            var myVar;
+
+            // something in quotes means that the coding software does not care what is inside- this is called a string
+            var myAnotherVar = "Here is my another var";
+
+            // alert(myAnotherVar);
+            console.log(myAnotherVar);
+
+            //concatenation means adding things together; a series of events- see below
+
+            var myName = "Irven";
+            var myFirstName = "Jasmine";
+            //alert("My first name is "+myFirstName +" and my last name is "+myName);
+
+            // () executes a function
+
+            //{} denotes how far you want to do something - called a code block; everything in code block will be executed
+            function sayMyName() {
+
+                console.log("Your name is " + myFirstName);
+            }
+
+            //calling the function
+            sayMyName();
+
+            function sayMyName2(name) {
+
+                console.log("Your name is " + name);
+            }
+
+            //calling the function
+            sayMyName2("Jasmine");
+            sayMyName2("Sara:");
+
+            // $ means jQuery - perform this function
+            // when the document is ready, jQuery gets the element with id myDiv and calls the html funtion; the html function will replace the html within the element
+            $(document).ready(function() {
+
+                //alert("the document is ready");
+
+                $("#myDiv").html("Hey, I was able to change the DOM");
+                // append means to add it to the end, the <br /> means to put it on a new line
+                $("#myDiv").append("<br>add something more!");
+
+            });
+        </script>
+    </body>
+</head>
+
+</html>

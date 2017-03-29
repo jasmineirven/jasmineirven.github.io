@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 9</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style media="screen">
+
+</style>
+
+<body>
+
+    <div class="info">Customer Name: Jasmine </div>
+    <div class="info">Credit Card ****4356</div>
+    <div class="info">Expiry 08/12</div>
+    <div class="info">Price 57.65</div>
+    <div class="info">Address: Toronto</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var num1 = 5;
+        var num2 = 7;
+        var num3 = 23;
+        var num4 = 78;
+        var num5 = 9.1;
+
+        var total = num1 + num2 + num3 + num4 + num5;
+        alert("the total is" + total);
+
+        //for (start; end condition; increment)
+        // execute code inside curly brackets until end condition is met
+        //  for (var i = 0; i <= 10; i = i + 1) {
+        //    console.log("The value if i is" + i); }
+
+
+        var myArray = [34, 878, 4, 14, 89, 90, 545, 88, 34, 67, 33];
+
+        //    myArray[2]; 4
+
+        //for (var i = 0; i <= 10; i = i + 1) {
+        //console.log("The value in myArray at spot " + i + " is " +myArray[i]);}
+
+
+        // OR
+
+        $(document).ready(function() {
+
+            /*            for (var i = 0; i < myArray.length; i = i + 1) {
+                            var myMessage = ("The value in myArray at spot " + i + " is " + myArray[i]);
+                            console.log(myMessage);
+                            $("body").append(myMessage + "<br />");
+
+                        }
+
+
+
+                        //Multiplication = *
+                        // set product to first value in array// to avoid * by 0 you have to set the variable to 1 and then the product to myArray (otherwise your product would always be 0)
+
+                        var product = myArray[0];
+                        for (var i = 1; i < myArray.length; i = i + 1) {
+                            // multiply with next number
+                            product = product * myArray[i];
+                        }
+                        // output to screen
+                        $("body").append("The product is " + product + "<br/>"); */
+
+            //objects
+            //key value pairs, delimited by comma (no comma on last key-value)
+            //use curly brackets
+            // not an array so you can't use properties like 'length'
+            var car = {
+                type: "SUV",
+                price: 45000,
+                mileage: 24,
+                color: "magenta",
+                fuelType: "electric",
+                src: "images/car1.jpg"
+
+            }
+
+            // how to loop through properties of an object?
+            //car.type is exactly the same as car[type]
+            for (var key in car) { //for every key in car
+                //execute this code
+                $("body").append("<div> Key name is " + key + "and value is " + car[key] + "</div>");
+
+                //example of using JQuery to look through html elements
+
+                // get all info elements
+                // for each one do the function
+                $(".info").each(function(){
+                  //use 'this' as a keyword to refer to the current one in the loop (because they don't have individual names)
+                  // the text function goes and gets the text from the div
+                  console.log("The text of this div is "+$(this).text() );
+
+
+
+                });
+
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

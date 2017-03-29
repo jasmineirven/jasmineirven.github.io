@@ -1,0 +1,67 @@
+.header, .footer {
+    height: 75px;
+    min-height: 75px;
+    max-height: 75px;
+}
+
+.col-md-1{
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+}
+
+.col-md-2{
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.col-md-3{
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.col-md-4{
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.col-md-6{
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.col-md-8{
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.col-md-9{
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.col-md-12{
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+
+#content{
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+#social-side{
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+
+}

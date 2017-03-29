@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centering Content</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Raleway" rel="stylesheet">
+
+    <style media="screen">
+        .topRow {
+            height: 50px;
+            min-height: 50px;
+            max-height: 50px;
+        }
+
+        h1 {
+            font-family: 'Homemade Apple', cursive;
+            font-size: 25px;
+            padding: 0 5px;
+        }
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .middleRow {
+            height: 400px;
+            min-height: 400px;
+            max-height: 400px;
+        }
+
+        .middleRow img {
+
+
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .pinPoint{
+          top: 30%;
+
+        }
+
+        .roundTravel{
+          top: 80%;
+          border: 2px solid black;
+
+        }
+
+        .bottomRow {
+            height: 150px;
+            min-height: 150px;
+            max-height: 150px;
+        }
+
+        .positionRelative {
+            position: relative;
+        }
+
+        .bottomRow img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3 randomColor topRow">
+                <h1>Centering</h1>
+            </div>
+            <div class="col-md-7 randomColor topRow">
+            </div>
+            <div class="col-md-1 randomColor topRow">
+                <h2>Home</h2>
+            </div>
+            <div class="col-md-1 randomColor topRow">
+                <h2>Travel</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="col-md-12 randomColor middleRow positionRelative">
+                    <img src="images/roundTravel.jpg" alt="Travel Photo" class="roundTravel" />
+                    <img src="images/pinPoint.jpg" alt="Travel Photo" class="pinPoint"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 randomColor bottomRow positionRelative">
+                <img src="images/travelLogo.png" alt="travel logo" />
+            </div>
+            <div class="col-md-3 randomColor bottomRow positionRelative">
+                <img src="images/travelLogo.png" alt="travel logo" />
+            </div>
+            <div class="col-md-3 randomColor bottomRow positionRelative">
+                <img src="images/travelLogo.png" alt="travel logo" />
+            </div>
+            <div class="col-md-3 randomColor bottomRow positionRelative">
+                <img src="images/travelLogo.png" alt="travel logo" />
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
