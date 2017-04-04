@@ -1,7 +1,7 @@
 [{
         "brand": "Samsung",
         "name": "Galaxy S7",
-        "price": 100.00,
+        "price": "100.00",
         "carrier": "Koodo Mobile",
         "image":"samsung.jpeg",
         "details":"The Samsung Galaxy S7 knows no limits. Watch videos in crisp clarity on the 5.1 inch Quad HD Super AMOLED display and enjoy PC-quality gaming thanks to Vulkan API support."
@@ -9,7 +9,7 @@
     {
       "brand": "Apple",
       "name": "iPhone SE 16GB",
-      "price": 0.00,
+      "price": "0.00",
       "carrier": "Koodo Mobile",
       "image":"iphone.jpeg",
         "details":"12MP iSight camera with Focus Pixels and True Tone flash. A9 chip with integrated M9 motion coprocessor."
@@ -17,7 +17,7 @@
     {
       "brand": "Vertu",
       "name": "Signature 18ct; Red and Gold Stainless Steel Mobile Phone, Black",
-      "price": 36 520.00,
+      "price": "36 520.00",
       "carrier": "Selfridges CA",
       "image":"vertu.jpeg",
         "details":"Meticulously handcrafted from the finest rare materials to the label's uncompromising standards, Signature is the outstanding, elementary expression of Vertu’s vision."
@@ -25,7 +25,7 @@
     {
       "brand": "Google",
       "name": "Pixel",
-      "price": 899.00,
+      "price": "899.00",
       "carrier": "Google Mobile",
       "image":"pixel.jpeg",
         "details":"Meet Pixel, a phone by Google. It’s the first phone with the Google Assistant built in. Ask it questions. Tell it to do things."
@@ -34,7 +34,7 @@
     {
       "brand": "Samsung",
       "name": "Galaxy J7 Dual Sim Unlocked",
-      "price": 204.62,
+      "price": "204.62",
       "carrier": "AliExpress.com",
       "image":"samsung2.jpeg",
         "details":"See more details at AliExpress.com."
@@ -42,7 +42,7 @@
     {
       "brand": "Applie",
       "name": "iPhone 5",
-      "price": 229.99,
+      "price": "229.99",
       "carrier": "FactoryDirect.com",
       "image":"iphone5.jpeg",
         "details":"Apple iPhone 5 16GB GSM Smartphone-white."
@@ -50,7 +50,7 @@
     {
       "brand": "Samsung",
       "name": "Galaxy S6",
-      "price": 249.99,
+      "price": "249.99",
       "carrier": "eBay",
       "image":"samsung3.jpeg",
         "details":"Samsung Galaxy S6 SM-G 920 unlocked smartphone 32 GB. This is a refurbished samsung galaxy s 6 smartphone this phone will show visible signs of handling such as some scratches."
@@ -58,7 +58,7 @@
     {
       "brand": "Apple",
       "name": "iPhone 4S",
-      "price": 129.99,
+      "price": "129.99",
       "carrier": "FactoryDirect.ca",
       "image":"iphone4.jpeg",
         "details":"Works with multiple GSM Carriers; No Contract! MicroSIM Slot Quad-Band UMTS/HSDPA+ 800MHz ARM Cortex-A9 Apple A5 Dual-Core Processor."
@@ -66,7 +66,7 @@
     {
       "brand": "Blue Studio",
       "name": "Selfie 2",
-      "price": 110.00,
+      "price": "110.00",
       "carrier": "eBay",
       "image":"blueStudio.jpeg",
         "details":"Works with multiple GSM Carriers; No Contract! MicroSIM Slot Quad-Band UMTS/HSDPA+ 800MHz ARM Cortex-A9 Apple A5 Dual-Core Processor."
@@ -74,7 +74,7 @@
     {
       "brand": "Samsung",
       "name": "GalaxyS4",
-      "price": 229.99,
+      "price": "229.99",
       "carrier": "FactoryDirect.ca",
       "image":"samsung4.jpeg",
         "details":"Stay connected either on the phone or the Web with the Galaxy S4 I337 from Samsung. With 16 GB of memory and a 4G connection."
