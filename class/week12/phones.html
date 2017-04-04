@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phones</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style media="screen">
+    body {
+        font-family: 'Coda', cursive;
+    }
+
+    .header {
+        height: 75px;
+        max-height: 75px;
+        min-height: 75px;
+    }
+
+    .leftMiddle,
+    .middleMiddle,
+    .rightMiddle {
+        height: 800px;
+        max-height: 800px;
+        min-height: 800px;
+    }
+
+    .footer {
+        height: 75px;
+        max-height: 75px;
+        min-height: 75px;
+    }
+
+    #phoneInfo img {
+        width: 100px;
+        float: left;
+    }
+
+    #phoneInfo div {
+        padding-top: 50px;
+        padding-left: 150px;
+        margin-bottom: 40px;
+    }
+
+    h1{
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+</style>
+
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 randomColor header">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 randomColor leftMiddle">
+            </div>
+            <div class="col-md-8 randomColor middleMiddle">
+
+                <div id="phoneInfo">
+                    <img src="http://advancement.yorku.ca/files/2014/09/icon_31313.png" alt="" />
+                    <div>
+                        <h1> Phones </h1>
+                    </div>
+                </div>
+                <table id="phoneTable" class="table table-hover">
+                    <tr>
+                        <!--th= used for table header-->
+                        <th>Brand</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Carrier</th>
+                        <th>Details</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-2 randomColor rightMiddle">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 randomColor footer">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var phoneUrl = "https://jasmineirven.github.io/class/week12/myJson.json";
+
+        //we use get for an html file
+        //we use getJSON for a .json file
+
+        $.getJSON(phoneUrl)
+            .done(function(data) {
+                console.log("success!");
+                console.dir(data);
+
+                var myHtml = "";
+
+                for (var i = 0; i < data.length; i++) {
+                    //      console.log("i" + i + " name " + data[i].name);
+
+                    myHtml += "<tr data-index='" + i + "'>" +
+                        "<td>" + data[i].brand + "</td>" + //brand
+                        "<td>" + data[i].name + "</td>" + //name
+                        "<td>" + data[i].price + "</td>" + //price
+                        "<td>" + data[i].carrier + "</td>" + //carrier
+                        "<td>" + data[i].details + "</td>" + //details
+                        "</tr>";
+                }
+
+                $(document).ready(function() {
+                    $("#phoneTable").append(myHtml);
+
+                    // for all td in statsTable turn on a click function & then execute the function
+                    $("#phoneTable").find("td").on("click", function() {
+
+                        // get the closes row of this td and get the data-index attribute
+                        var index = $(this).closest("tr").attr("data-index");
+                        console.log("index :" + index);
+
+                        //change the src attr to the correct image
+                        $("#phoneInfo").find("img").attr("src", data[index].image);
+                        //replace the html in the playerInfo div with player details
+                        $("#phoneInfo").find("div").html(data[index].details);
+
+                    })
+                })
+
+            })
+
+
+            .fail(function(data) {
+                console.log("fail!");
+                console.dir(data);
+            })
+    </script>
+
+
+
+
+
+  <!--  <script>
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 55 + 200);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber() + "," + getRandomNumber() + "," + getRandomNumber() + ")");
+
+            })
+
+
+
+        })
+    </script>
+
+  -->
+</body>
+
+</html>
